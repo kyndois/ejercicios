@@ -1,27 +1,27 @@
 import kotlin.math.abs
 
 fun main() {
-    zorro(-4, "@")
+    zorro(-8, "@")
 }
 
 fun zorro(height: Int, char: String) {
-    for (i in 1..abs(height)) {
-        if (i == 1 || i == abs(height)) {
-            repeat(abs(height)) {
-                print("$char")
+    for (i in 1..(abs(height))) {
+        if (i == 1 || i == (abs(height))) {
+            repeat(abs(height)-2) {
+                print(char)
             }
             println()
         } else {
             if (height < 0) {
-                repeat(i - 1) {
+                repeat(i - 2) {
                     print(" ")
                 }
             }else{
-                repeat(height - i) {
+                repeat((height-1) - i) {
                     print(" ")
                 }
             }
-            print("$char")
+            print(char)
             println()
         }
 
