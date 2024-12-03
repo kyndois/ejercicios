@@ -1,3 +1,5 @@
+// PREGUNTA 1 - K Ejercicios sencillos con recursividad
+
 fun main(){
     println(mulRusa2(105,1))
     result = 0
@@ -10,6 +12,7 @@ fun main(){
     println(mulRusa2(105,68))
 }
 var result = 0
+//-------->> LA FUNCIÓN TIENE un "2" EN EL NOMBRE PARA NO HACER CONFLICTO CON EL OTRO EJERCICIO <<--------
 fun mulRusa2(num1: Int, num2: Int):Int{
     if(num2 % 2 != 0){                          // Si [num2] es impar
         result += num1                          // Se suma [num1] a la variable global
