@@ -6,7 +6,7 @@ Redonda(R), Blanca(B), Negra(N), Corchea(C) o Semi corchea(S)
 separadas entre sí por uno o muchos espacios en blanco.
  */
 fun main() {
-    var line = readln().trim()
+    var line = readln()
     while (line != "FIN"){
         var total = 0.0
         for (letter in line){
