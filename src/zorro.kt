@@ -1,7 +1,7 @@
 import kotlin.math.abs
 
 fun main() {
-    zorro(-8, "@")
+    zorro(-5, "@")
 }
 
 fun zorro(height: Int, char: String) {
@@ -18,7 +18,7 @@ fun zorro(height: Int, char: String) {
                 }
             } else {                                        //Si es positivo
                 repeat((height - 1) - i) {            //Repetimos el espacio tantas veces como altura-1-i sea
-                    print(" ")                              //(controlamos que si estamos en la segunda conlumna haya tantos espacios hasta
+                    print(" ")                              //(controlamos que si estamos en la segunda linea haya tantos espacios hasta
                 }                                           //que falten 3 caracteres para llegar a height-2 que es donde debe ir el caracter
             }
             print(char)                                     //Despues de imprimir (o no) los espacios, imprime el caracter
