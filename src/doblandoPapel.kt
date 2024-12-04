@@ -36,7 +36,7 @@ fun imprimirFiguras(original: Array<CharArray>, simetrica: List<CharArray>){
 }
 
 fun getSimetrica(original: Array<CharArray>):List<CharArray>{
-    var simetrica = mutableListOf<CharArray>()
+    val simetrica = mutableListOf<CharArray>()
     for (o in original){
         simetrica.add(o.reversed().toCharArray())
     }
