@@ -15,7 +15,7 @@ fun main() {
         fun contaminar(row: Int, col: Int) {
             if (row !in pool.indices) return
             if (col !in 0..pool[0].size-1) return
-            if (pool[row][col] != 'T' && pool[row][col] != 'R') {
+            if (pool[row][col] == 'A') {
                 pool[row][col] = 'R'
                 contaminar(row + 1, col)
                 contaminar(row - 1, col)
