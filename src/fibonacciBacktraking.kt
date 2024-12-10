@@ -38,6 +38,7 @@ fun main(){
 
     for(i in matriz){
         for(j in i){
+            //Esto solo para que quede bonito
             print("[" + "%03d".format(j) + "] ")
         }
         println()
