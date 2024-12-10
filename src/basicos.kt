@@ -3,8 +3,24 @@
  */
 
 fun main(){
-    val entrada = readln()
-    contarPalabras(entrada)
+
+    fun ejeParImpar(){
+        parImpar()
+    }
+
+    fun ejeContarPalabras(){
+        val entrada = readln()
+        contarPalabras(entrada)
+    }
+
+    fun ejeBuscarNombres(){
+        val entrada = readln()
+        val listaNombres = buscarNombres(entrada[0])
+        println("Lista de nombres con la letra '${entrada[0]}'")
+        for (nombre in listaNombres){
+            println(nombre)
+        }
+    }
 }
 
 /**
@@ -51,4 +67,30 @@ fun contarPalabras(text: String){
         println(pal.uppercase())
     }
     println("La palabra mas larga es: '${masLarga.uppercase()}' con ${masLarga.length} letras.")
+}
+
+/**
+ * Recibe un Char con la letra introducida
+ * Comprueba que nombres tienen la letra introducida y los devuelve en forma de lista
+ * El MAIN debe recuperar la lista devuelta e imprimirla
+ */
+
+fun buscarNombres(caracter: Char):List<String>{
+    val nombres = listOf(
+        "Ana", "María", "Laura", "Sofía", "Lucía",
+        "Javier", "David", "Alejandro", "Daniel", "Álvaro",
+        "Carmen", "Isabel", "Pilar", "Rosa", "Lola",
+        "Antonio", "José",  "Manuel",  "Francisco", "Juan"
+    )
+    val resultado = mutableListOf<String>()
+
+    for(nom in nombres){
+        for(letra in nom){
+            if(letra.uppercase() == caracter.uppercase()){
+                resultado.add(nom)
+                break
+            }
+        }
+    }
+    return resultado
 }
