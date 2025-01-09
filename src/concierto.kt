@@ -13,19 +13,43 @@ fun main(){
             if(column !in concierto[fila].indices) return
             if(concierto[fila][column] != 'S') return
             concierto[fila][column] = 'X'
-            contagio(fila+1, column)
-            contagio(fila-1, column)
             contagio(fila, column+1)
             contagio(fila, column-1)
+            if(fila-1 in concierto.indices) {
+                if (column > concierto[fila - 1].lastIndex) {
+                    contagio(fila - 1, concierto[fila - 1].lastIndex)
+                } else {
+                    contagio(fila - 1, column)
+                }
+            }
+            if(fila+1 in concierto.indices) {
+                if (fila + 1 < concierto.size && column > concierto[fila + 1].lastIndex) {
+                    contagio(fila + 1, concierto[fila + 1].lastIndex)
+                } else {
+                    contagio(fila + 1, column)
+                }
+            }
         }
 
         for (f in concierto.indices){
             for(t in concierto[f].indices){
                 if(concierto[f][t] == 'T'){
-                    contagio(f-1,t)
                     contagio(f,t+1)
-                    contagio(f+1,t)
                     contagio(f,t-1)
+                    if(f-1 in concierto.indices) {
+                        if (t > concierto[f - 1].lastIndex) {
+                            contagio(f - 1, concierto[f - 1].lastIndex)
+                        } else {
+                            contagio(f - 1, t)
+                        }
+                    }
+                    if(f+1 in concierto.indices) {
+                        if (t > concierto[f + 1].lastIndex) {
+                            contagio(f + 1, concierto[f + 1].lastIndex)
+                        } else {
+                            contagio(f + 1, t)
+                        }
+                    }
                 }
             }
         }
