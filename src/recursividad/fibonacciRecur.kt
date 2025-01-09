@@ -1,3 +1,5 @@
+package recursividad
+
 /**
  * Recibe dos números separados entre 0-9
  * La secuencia debe ser de manera que cada número será la suma de los 2 anteriores

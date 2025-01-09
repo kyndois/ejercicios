@@ -1,4 +1,4 @@
-// PREGUNTA 17 - K FUNCIONES SENCILLAS
+package medio// PREGUNTA 17 - K FUNCIONES SENCILLAS
 
 fun main() {
     println(mulRusa(105,1))

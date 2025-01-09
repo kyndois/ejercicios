@@ -1,3 +1,5 @@
+package basicos
+
 import kotlin.math.abs
 
 fun main() {

@@ -1,3 +1,5 @@
+package medio
+
 fun main() {
     var original = arrayOf(
         charArrayOf('*', ' ', ' '),

@@ -1,4 +1,4 @@
-// PREGUNTA 1 - K Ejercicios sencillos con recursividad
+package recursividad// PREGUNTA 1 - K Ejercicios sencillos con recursividad
 
 fun main(){
     println(mulRusa2(105,1))

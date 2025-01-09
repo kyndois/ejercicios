@@ -1,9 +1,11 @@
-/*
-ENTRADA: Consiste en una serie de compases.
-"FIN" indica que no hay que procesar más compases.
-Cada  compás es descrito en una linea como una secuencia de notas:
-Redonda(R), Blanca(B), Negra(N), Corchea(C) o Semi corchea(S)
-separadas entre sí por uno o muchos espacios en blanco.
+package basicos
+
+/**
+    ENTRADA: Consiste en una serie de compases.
+    "FIN" indica que no hay que procesar más compases.
+    Cada  compás es descrito en una linea como una secuencia de notas:
+    Redonda(R), Blanca(B), Negra(N), Corchea(C) o Semi corchea(S)
+    separadas entre sí por uno o muchos espacios en blanco.
  */
 fun main() {
     var line = readln()

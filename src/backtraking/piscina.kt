@@ -1,3 +1,5 @@
+package backtraking
+
 fun main() {
     var size = readln()
     while(size != "0 0") {

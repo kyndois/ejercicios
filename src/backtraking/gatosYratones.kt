@@ -1,4 +1,4 @@
-/*Entrada: Una serie de casos. Cada caso es una única línea que contiene cuatro enteros que indican el
+package backtraking/*Entrada: Una serie de casos. Cada caso es una única línea que contiene cuatro enteros que indican el
 número de plantas,
 número de habitaciones por planta y
 la planta y habitación donde se encuentra la rata.  Las plantas y habitaciones comienzan a numerarse desde 1.

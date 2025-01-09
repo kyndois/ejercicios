@@ -1,4 +1,4 @@
-// PREGUNTA 20 - K FUNCIONES SENCILLAS
+package medio// PREGUNTA 20 - K FUNCIONES SENCILLAS
 
 fun main() {
     println(cesar("Alea iacta est", 3))
