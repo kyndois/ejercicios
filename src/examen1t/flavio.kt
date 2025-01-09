@@ -1,3 +1,5 @@
+package examen1t
+
 fun main(){
     var entrada = readln()
     while(entrada != "0 0"){
