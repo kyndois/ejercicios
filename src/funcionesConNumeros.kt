@@ -14,6 +14,7 @@ fun main(){
      * -media() Devuelve la media de los números introducidos.
      * -masMedia() Devuelve la lista de números que igualen o superen la media.
      * -ultimoImparXPares() Devuelve la multiplicación del último número impar por el número total de pares
+     * -nombrePequeno() Devuelve el nombre del número má pequeño de la lista
      */
 
     /*
@@ -69,6 +70,8 @@ fun salida(listaNumeros: List<Int>) {
     println(masMedia(listaNumeros))
     println("La multiplicación de el ultimo impar por la cantidad de pares es:")
     println(ultimoImparXPares(listaNumeros))
+    println("El número más pequeño es el:")
+    println(nombrePequeno(listaNumeros))
 }
 fun listaNumeros(lista: List<Int>) : String{
     var numeros = ""
@@ -140,4 +143,8 @@ fun masMedia(lista: List<Int>) : List<Int>{
 }
 fun ultimoImparXPares(lista: List<Int>) : Int{
     return ultimoImpar(lista)*contarPares(lista)
+}
+fun nombrePequeno(lista: List<Int>) : String{
+    val numeros = listOf("Cero","Uno","Dos","Tres","Cuatro","Cinco","Seis","Siete","Ocho","Nueve")
+    return numeros[lista.minOf { it }]
 }
