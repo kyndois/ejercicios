@@ -10,7 +10,7 @@ fun main() {
     var numIntentos = 1
     var acierto = false
     var letraCorrecta = false
-    //val rm = ReproductorMidi("pugnodollari.mid")
+    val rm = ReproductorMidi("pugnodollari.mid")
     val palabra = frutas[(0..19).random()].uppercase()
     var aciertos = Array(palabra.length) { '_' }
     println("Cargando juego...")
