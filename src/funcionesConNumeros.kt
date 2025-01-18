@@ -112,20 +112,20 @@ fun multiplicar(lista: List<Int>) : Int{
     return lista.first()*lista.last()
 }
 fun dividir(lista: List<Int>) : Int{
-    var mayor = 0
-    var menor = 100
-    for(numero in lista){
-        if(numero<menor) menor = numero
-        if(numero>mayor) mayor = numero
-    }
-    return mayor/menor
+//    var mayor = 0
+//    var menor = 100
+//    for(numero in lista){
+//        if(numero<menor) menor = numero
+//        if(numero>mayor) mayor = numero
+//    }
+    return lista.max()/lista.min()
 }
 fun mayorDiez(lista: List<Int>) : String{
-    var mayores = ""
-    for(numero in lista){
-        if(numero>10) mayores+= "$numero "
-    }
-    return mayores
+//    var mayores = ""
+//    for(numero in lista){
+//        if(numero>10) mayores+= "$numero "
+//    }
+    return lista.filter { it > 10 }.toList().toString()
 }
 fun divisible(lista: List<Int>) : Boolean{
     return lista[0]%3 == 0
