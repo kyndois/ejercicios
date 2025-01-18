@@ -19,7 +19,13 @@ fun main() {
     while (numIntentos < 7 && !acierto) {
         println("Introduzca una letra:")
         val entrada = readln().first().uppercaseChar()
-        if (entrada in palabra) {
+        clearScreen()
+        if (entrada in aciertos){
+            letraCorrecta = false
+            print(DibujoAhorcado.RED_BACKGROUND)
+            print("*****LETRA REPETIDA!!*****")
+            println(DibujoAhorcado.RESET)
+        }else if (entrada in palabra) {
             letraCorrecta = true
             for (c in aciertos.indices) {
                 if (palabra[c] == entrada) {
@@ -60,4 +66,8 @@ fun main() {
     }
 
 
+}
+
+fun clearScreen() {
+    println("\u001b[H\u001b[2J")
 }
