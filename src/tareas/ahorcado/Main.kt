@@ -3,9 +3,9 @@ package tareas.ahorcado
 fun main() {
     val frutas = arrayOf(
         "manzana", "pera", "banana", "uva", "naranja",
-        "fresa", "kiwi", "melón", "sandía", "piña",
+        "fresa", "kiwi", "melon", "sandia", "piña",
         "mango", "papaya", "cereza", "ciruela", "higo",
-        "arándano", "frambuesa", "grosella", "limón", "maracuyá"
+        "arandano", "frambuesa", "grosella", "limon", "maracuya"
     )
     var numIntentos = 1
     var acierto = false
@@ -16,7 +16,8 @@ fun main() {
     println("Cargando juego...")
     Thread.sleep(2000)
 
-    while (numIntentos < 7 || acierto) {
+    while (numIntentos < 7 && !acierto) {
+        println("Introduzca una letra:")
         val entrada = readln().first().uppercaseChar()
         if (entrada in palabra) {
             letraCorrecta = true
@@ -30,12 +31,17 @@ fun main() {
         }
         if (!letraCorrecta) {
             numIntentos++
+            print(DibujoAhorcado.RED_BACKGROUND)
+            print("**ERROR**")
+            println(DibujoAhorcado.RESET)
         }
         DibujoAhorcado.dibujar(numIntentos)
         for(c in aciertos){
+            print(DibujoAhorcado.GREEN)
             print(c)
-        }
 
+        }
+        println(DibujoAhorcado.RESET)
         for (c in aciertos.indices) {
             if (aciertos[c] == '_') {
                 break

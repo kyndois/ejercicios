@@ -1,17 +1,16 @@
 package tareas.ahorcado
 
 internal object DibujoAhorcado {
+    val RED_BACKGROUND = "\u001B[41m"
+    val YELLOW_BACKGROUND = "\u001B[43m"
+    val GREEN = "\u001B[32m"
+    val RED = "\u001B[31m"
+    val YELLOW = "\u001B[33m"
+    val RESET = "\u001B[0m"
+    val PURPLE = "\u001B[35m"
+    val WHITE_BACKGROUND = "\u001B[47m"
+
     fun dibujar(i: Int) {
-        val RED_BACKGROUND = "\u001B[41m"
-        val YELLOW_BACKGROUND = "\u001B[43m"
-        val RED = "\u001B[31m"
-        val YELLOW = "\u001B[33m"
-        val RESET = "\u001B[0m"
-        val PURPLE = "\u001B[35m"
-        val WHITE_BACKGROUND = "\u001B[47m"
-
-
-
         when (i) {
             1 -> {
                 println(" ---------------------")
