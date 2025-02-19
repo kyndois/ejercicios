@@ -46,27 +46,27 @@ fun main(){
 
 }
 fun salida(listaNumeros: List<Int>) {
-    println("Números:")
-    println(listaNumeros(listaNumeros))
-    println("Cantidad de números:")
-    println(contarNumeros(listaNumeros))
-    println("El último número impar es:")
-    println(ultimoImpar(listaNumeros))
-    println("El número total de pares es:")
-    println(contarPares(listaNumeros))
-    println("La suma de todos los números es:")
-    println(suma(listaNumeros))
-    println("La multiplicación de el primero por último es:")
-    println(multiplicar(listaNumeros))
-    println("La división del número mayor entre el menor es:")
-    println(dividir(listaNumeros))
-    println("Los número mayores a 10 son:")
-    println(mayorDiez(listaNumeros))
-    println("El primer número és divisible entre 3")
-    println(if (divisible(listaNumeros)) "Verdadero" else "Falso")
-    println("La media de los número es:")
-    println(media(listaNumeros))
-    println("Los número que superan la media son:")
+//    println("Números:")
+//    println(listaNumeros(listaNumeros))
+//    println("Cantidad de números:")
+//    println(contarNumeros(listaNumeros))
+//    println("El último número impar es:")
+//    println(ultimoImpar(listaNumeros))
+//    println("El número total de pares es:")
+//    println(contarPares(listaNumeros))
+//    println("La suma de todos los números es:")
+//    println(suma(listaNumeros))
+//    println("La multiplicación de el primero por último es:")
+//    println(multiplicar(listaNumeros))
+//    println("La división del número mayor entre el menor es:")
+//    println(dividir(listaNumeros))
+//    println("Los número mayores a 10 son:")
+//    println(mayorDiez(listaNumeros))
+//    println("El primer número és divisible entre 3")
+//    println(if (divisible(listaNumeros)) "Verdadero" else "Falso")
+//    println("La media de los número es:")
+//    println(media(listaNumeros))
+//    println("Los número que superan la media son:")
     println(masMedia(listaNumeros))
     println("La multiplicación de el ultimo impar por la cantidad de pares es:")
     println(ultimoImparXPares(listaNumeros))
@@ -139,7 +139,8 @@ fun masMedia(lista: List<Int>) : List<Int>{
     for (numero in lista){
         if(numero >= media) superan.add(numero)
     }
-    return superan
+    val list : List<Int> = lista.map { it }.filter { it>=lista.average() }
+    return list
 }
 fun ultimoImparXPares(lista: List<Int>) : Int{
     return ultimoImpar(lista)*contarPares(lista)
