@@ -14,24 +14,36 @@ interface ColaPersonas {
     fun esVacia(): Boolean // Indica si la cola está vacía
 }
 
-class MiColaPersonas(): ColaPersonas{
+class MiColaPersonas : ColaPersonas {
     var cola: NodoPersona? = null
     override fun encolar(dato: Persona) {
         var ultimo = cola
-        while (cola?.sig != null){
-            ultimo = cola?.sig
+        if(esVacia()) cola = NodoPersona(dato)
+        while (ultimo?.sig != null){
+            ultimo = ultimo.sig
         }
-
+        ultimo?.sig = NodoPersona(dato)
     }
 
     override fun desencolar(): Persona {
-        TODO("Not yet implemented")
+        val drop = cola?.dato
+        cola = cola?.sig
+        return drop!!
     }
 
     override fun esVacia(): Boolean {
-        TODO("Not yet implemented")
+        return cola == null
     }
 
+    override fun toString(): String {
+        var str = ""
+        var recorrer = cola
+        while (cola != null) {
+            str += recorrer
+            recorrer = recorrer?.sig
+        }
+        return str
+    }
 }
 
 fun main() {
