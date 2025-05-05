@@ -16,19 +16,26 @@ interface ColaPersonas {
 
 class MiColaPersonas : ColaPersonas {
     var cola: NodoPersona? = null
+    private var ultimo: NodoPersona? = null
+
     override fun encolar(dato: Persona) {
-        var ultimo = cola
-        if(esVacia()) cola = NodoPersona(dato)
-        while (ultimo?.sig != null){
-            ultimo = ultimo.sig
+        val nodo = NodoPersona(dato)
+        if (esVacia()) {
+            cola = nodo
+            ultimo = nodo
+        } else {
+            ultimo?.sig = nodo
+            ultimo = nodo
         }
-        ultimo?.sig = NodoPersona(dato)
     }
 
     override fun desencolar(): Persona {
-        val drop = cola?.dato
+        val dato = cola?.dato ?: throw NoSuchElementException("Cola vacía")
         cola = cola?.sig
-        return drop!!
+        if (cola == null) {
+            ultimo = null
+        }
+        return dato
     }
 
     override fun esVacia(): Boolean {
@@ -38,9 +45,9 @@ class MiColaPersonas : ColaPersonas {
     override fun toString(): String {
         var str = ""
         var recorrer = cola
-        while (cola != null) {
+        while (recorrer != null) {
             str += recorrer
-            recorrer = recorrer?.sig
+            recorrer = recorrer.sig
         }
         return str
     }
